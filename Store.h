@@ -10,7 +10,7 @@ using namespace std;
 
 class store {
   public:
-    bool borrowItem();
+    bool borrowItem(int customerId, string item);
     bool returnItem();
     void printInventory();
     void printHistory();
