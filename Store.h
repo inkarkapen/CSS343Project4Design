@@ -11,9 +11,9 @@ using namespace std;
 class store {
   public:
     bool borrowItem(int customerId, string item);
-    bool returnItem();
+    bool returnItem(int customerId, string item);
     void printInventory();
-    void printHistory();
+    void printHistory(int customerId);
 
   private:
     // customerID->customer object
