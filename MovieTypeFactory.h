@@ -5,15 +5,16 @@
 #include "Drama.h"
 #include "Comedy.h"
 
+template <class T>
 class MovieTypeFactory{
   public:
-    static Product *create(const string &genre, string mediaInfo) {
+    static Product *create(const string &genre, <T> attributes) {
       if (genre == "C")
-        return new Classic();
+        return new Classic(attributes);
       else if (genre == "D")
-        return new Drama();
+        return new Drama(attributes);
       else if (genre == "F")
-        return new Comedy();
+        return new Comedy(attributes);
       else
         return  nullptr;
   }};

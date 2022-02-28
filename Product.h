@@ -10,6 +10,10 @@ class Product {
     string name;
     double price;
     int stock;
+
+    string mediaType; //Movies
+    string mediaCategory; //DVD
+    string genre; //Classic etc
   public:
     virtual ~Product() = default;
     //product(string name, double price, int stock);
