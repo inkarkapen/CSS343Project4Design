@@ -1,6 +1,7 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
+#include "Product.h"
 #include <list>
 #include <string>
 
@@ -8,8 +9,8 @@ using namespace std;
 
 class Customer {
   public:
-    customer();
-    customer(int id, string first, string last);
+    Customer();
+    Customer(int id, string first, string last);
     int getId();
     string getFirst();
     string getLast();

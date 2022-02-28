@@ -2,11 +2,11 @@
 #define classic_h
 
 #include <string>
-#include "MediaCategory.h"
+#include "Product.h"
 
 using namespace std;
 
-class Classic : public mediaCategory {
+class Classic : public Product {
 public: 
   Classic();
 

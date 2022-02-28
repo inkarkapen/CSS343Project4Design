@@ -6,6 +6,9 @@
 using namespace std;
 
 class Product {
+  friend ostream &operator<<(ostream &os, const Product &p) {
+    return p.sort(os);
+  }
   protected:
     string name;
     double price;
@@ -24,6 +27,7 @@ class Product {
     virtual void setPrice(double price) = 0;
     virtual int getStock() = 0;
     virtual void setStock(int stock) = 0;
+    virtual ostream &sort(ostream &os) const = 0;
 };
 
 #endif // PRODUCT_H
