@@ -1,12 +1,21 @@
 #ifndef MovieTypeFactory_h
 #define MovieTypeFactory_h
 
-#include "ClassicFactory.h"
-#include "DramaFactory.h"
-#include "ComedyFactory.h"
+#include "Classic.h"
+#include "Drama.h"
+#include "Comedy.h"
 
-class MediaTypeFactory {
-  virtual ClassicFactory *createClassicFactory() const = 0;
-};
+class MovieTypeFactory{
+  public:
+    static Product *create(const string &genre, string mediaInfo) {
+      if (genre == "C")
+        return new Classic();
+      else if (genre == "D")
+        return new Drama();
+      else if (genre == "F")
+        return new Comedy();
+      else
+        return  nullptr;
+  }};
 
 #endif

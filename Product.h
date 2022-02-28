@@ -5,22 +5,21 @@
 
 using namespace std;
 
-class product {
-  public:
-    product();
-    product(string name, double price, int stock);
-
-    string getName();
-    void setName(string name);
-    double getPrice();
-    void setPrice(double price);
-    int getStock();
-    void setStock(int stock);
-
-  private:
+class Product {
+  protected:
     string name;
     double price;
     int stock;
+  public:
+    virtual ~Product() = default;
+    //product(string name, double price, int stock);
+
+    virtual string getName() = 0;
+    virtual void setName(string name) = 0;
+    virtual double getPrice() = 0;
+    virtual void setPrice(double price) = 0;
+    virtual int getStock() = 0;
+    virtual void setStock(int stock) = 0;
 };
 
 #endif // PRODUCT_H

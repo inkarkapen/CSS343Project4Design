@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class customer {
+class Customer {
   public:
     customer();
     customer(int id, string first, string last);
@@ -16,10 +16,17 @@ class customer {
     void getHistory();
 
   private:
+    // ex id is 0101
     int id;
+    // ex john smith
     string first, last;
+    // ex list of "B 1234 D F Pirates of the Caribbean, 2003"
     list<string> history;
-    list<string> checkoutOut;
+    // ex list pf product ites such as movies and other
+    // possible ones such as music ect. Product has media
+    // type, genre, name, year, director, actor/ess
+    // "D F Pirates of the Caribbean, 2003"
+    list<Product> checkedOutItems;
 };
 
 #endif // CUSTOMER_H

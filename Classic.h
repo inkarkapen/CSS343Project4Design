@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Classic : public mediaCategory {
+class Classic : public Product {
 public: 
   Classic();
 

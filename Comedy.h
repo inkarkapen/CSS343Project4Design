@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Comedy : public mediaCategory {
+class Comedy : public Product {
 public: 
   Comedy();
 
